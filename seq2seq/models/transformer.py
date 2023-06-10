@@ -12,7 +12,7 @@ from torch.autograd import Variable
 class Encoder(nn.Module):
     """Encoder"""
     def __init__(self, vocabulary, device, embed_dim=512, layers=2,
-                 heads=8, pf_dim=2048, dropout=0.5, max_positions=5000):
+                 heads=8, pf_dim=2048, dropout=0.2, max_positions=5000):
         super().__init__()
         input_dim = len(vocabulary)
         self.padding_idx = vocabulary.stoi['<pad>']
